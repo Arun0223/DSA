@@ -107,6 +107,8 @@ class Linked_List1:
             temp.next = None
             self.length -= 1
             return temp.value
+        
+ ll=Linked_List(10)
 
 
 
