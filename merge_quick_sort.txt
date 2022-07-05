@@ -1,0 +1,50 @@
+def meerrge(list1,list2):
+    combined=[]
+    i=0
+    j=0
+    while i < len(list1) and j < len(list2):
+        if list1[i]<list2[j]:
+            combined.append(list1[i])
+            i+=1
+        else:
+            combined.append(list2[j])
+            j+=1
+    while i<len(list1):
+        combined.append(list1[i])
+        i+=1
+    while j<len(list2):
+        combined.append(list2[j])
+        j+=1
+    return combined
+
+def mergeee_sort(my_list):
+    if len(my_list)==1:
+        return my_list
+    mid=int(len(my_list)/2)
+    left=my_list[:mid]
+    right=my_list[mid:]
+    return meerrge(mergeee_sort(left),mergeee_sort(right))
+
+
+def s(my_list,index1,index2):
+    temp=my_list[index1]
+    my_list[index1]=my_list[index2]
+    my_list[index2]=temp
+def p(my_list,pivot_index,end_index):
+    swap_index=pivot_index
+    for i in range(pivot_index+1,end_index+1):
+        if my_list[i]<my_list[pivot_index]:
+            swap_index+=1
+            s(my_list,i,swap_index)
+    s(my_list,pivot_index,swap_index)
+    return swap_index
+def q_s(my_list,left,right):
+    if left<right:
+        pivot_index=p(my_list,left,right)
+        q_s(my_list,left,pivot_index-1)
+        q_s(my_list,pivot_index+1,right)
+    return my_list
+
+
+
+
