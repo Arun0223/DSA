@@ -1,0 +1,109 @@
+Date and time module:
+Date ==> YEAR:MONTH:DAY
+Time ==> Hours:Minutes:Seconds:Micro-seconds
+
+By using this module we can create date and we can get the date all 7 filds
+
+2022:08:08:07:28:45:05000
+
+we have modeule called Datetime
+==> constants
+     datetime.MAXYEAR ==> 9999
+	 datetime.MINYEAR ==> 1
+	 
+	 
+in this module again we need to import thr date time class
+this date time has new() method it will retrieve the current date with time total 7 fields
+
+==> Getting the current time
+		import datetime
+		datetime.datetime.now()
+		==> datetime.datetime(2022, 8, 8, 7, 29, 29, 506539)
+Creating the date:
+	a=datetime(1999,5,10,12,49,56,6)
+	print(a)
+	datetime.datetime(1999, 5, 10, 12, 49, 56, 6)
+	b=datetime(1999,5,10)
+	print(b)
+	datetime.datetime(1999, 5, 10, 0, 0)
+Formatting the date
+Syntax:
+	res=datetime.datetime.now()
+	%y ==> for 2 digits of year
+	%Y ==> 4 digits of year
+
+	month
+	%b ==> short version of a month (june ==> jun)
+	%B ==> full version of month (june => June)
+
+	Day:
+	%a ==> small version of a day(Monday ==> mon)
+	%A ==> full version of a day (Monday ==> Monday)
+
+	Hours:
+	%H ==> (0-23)
+	%I ==> (0-12)
+	%p ==> (AM/PM)
+
+	Minutes:
+	%M ==> (0-59)
+
+	Seconds:
+	%S ==> (0-59)
+
+	Microseconds
+	%f (000000-999999)
+	
+Example:
+	res=datetime.datetime.now()
+	print(res.strftime("%Y"))   #2022
+	print(res.strftime("%y"))	#22
+	print(res.strftime("%b"))	#Aug
+	print(res.strftime("%B"))	#August
+	print(res.strftime("%w"))   #1
+	print(res.strftime("%W"))   #32
+	print(res.strftime("%a"))	#Mon
+	print(res.strftime("%A"))	#Monday
+	print(res.strftime("%H"))	#08
+	print(res.strftime("%m"))	#08
+	print(res.strftime("%M"))	#59
+	print(res.strftime("%S"))	#24
+	print(res.strftime("%f"))	#567843
+	
+==> timedelta() ==> This function used to manipulate the date (operations on date)
+This function has different parametres
+Syntax:
+	import datetime
+	datetime.timedelta(days=value,hours=value,minutes=value,seconds=value,microseconds=value)
+	Example:
+		current_date=datetime.datetime.now()
+			datetime.datetime(2022, 8, 8, 9, 6, 27, 113343)
+		new_date=current_date+datetime.timedelta(days=10)
+			datetime.datetime(2022, 8, 18, 9, 6, 27, 113343)
+		new_date=current_date+datetime.timedelta(minutes=10)
+			datetime.datetime(2022, 8, 8, 9, 16, 27, 113343)
+		new_date=current_date+datetime.timedelta(seconds=50)
+			datetime.datetime(2022, 8, 8, 9, 7, 17, 113343)
+
+	
+	## Clender module
+import calender
+1) calender([year]) ==> it will take year as argument and print the entire year calender
+2) c.firstweekday() ==> it will retrieve current day week day (0-6)	
+3) c.leap([year]) ==> it will take year as argument and return whether it's leap year or not in format of boolean value
+	Example:
+		print(c.isleap(1999))
+		print(c.isleap(2020))
+4) leapdays([year1],[year2]) ==> it will return the number of leap days between the year1 and year2
+5) month([year],[month]) ==> it will return the calender of the given year and month
+6) monthcalender([year],[month]) ==> it will return the calender in the form of weekday codes as index and the date will print with in the month 
+									 if dates are out of month it will return as 0
+7) monthrange([year],[month]) ==> it will take the year and month as argument and give tuple as output
+								  first_integer==> starting weekday of the month
+								  second_integer ==> no of days in a month
+8) weekday([year],[month],[day]) ==> it will retun the weekday of the given date
+
+
+
+
+

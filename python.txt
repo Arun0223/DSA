@@ -1,0 +1,26 @@
+Pyhton:
+	Python is a open source high level intrepeted interactive language which supports oops concept and functional programing
+Python was developed by Guido van Rossum in 1991.
+	==> ineratcive
+	==> intrepeted
+	==> open source
+	==> easy to learn
+	==> easy to maintain
+	==> many modules
+	==> easy to connect database
+	==> it supports for scientific operations such as data analysis 
+	==> it has huge community
+	
+Identifiers:
+	==> identifiers are nothing but variables,class and function names
+	==> it can start or contains A to Z and a to z 
+	==> it can start with _
+	==> it shouldn't start with numbers
+	==> it shoudn't has special characteristics such as %$&@
+	==> Class name should be in camel case 
+	==> if the identifier has _ which means protected
+	==> if identifier has __ which means private
+	==> if the identifier has __ at starting as well as ending which means language defined
+	
+
+	
